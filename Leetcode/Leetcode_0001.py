@@ -15,5 +15,11 @@ class Solution(object):
         """
         for i in range(len(nums)):
             for j in range(len(nums)):
-                if nums[i] + nums[j] == target and i != j:
+                if nums[i] + nums[j] == target and i != j: #Compares integer at positon i with integer at position j. If their sum equals target their index is returned.
                     return i,j
+                
+       
+    
+    
+#Time complexity: O(n^2)
+#Space complexity: O(n)
