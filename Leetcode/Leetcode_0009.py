@@ -12,9 +12,11 @@
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        num = str(x)
-        if num[::-1] == num:
+        num = str(x) #Convert to string to allow reversing
+        if num[::-1] == num: #Chekcs if the reversed string is equal to the normal string, making it a palindrome.
             return True
         else:
             return False
         
+#Time complexity: O(n)
+#Space complexity: O(n)
