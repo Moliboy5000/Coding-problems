@@ -25,7 +25,8 @@
 class Solution:
     def intToRoman(self, num: int) -> str:
         
-        dict_base1 =  {
+        #Each possible combination for each possible base is stored in its respective dictionary.
+        dict_base1 =  { 
             "0": "",
             "1": "I",
             "2": "II",
@@ -70,10 +71,12 @@ class Solution:
         dicts_list = [dict_base1, dict_base2, dict_base3,dict_base4]
         res = ""
         for i in range(len(num)):
-            res += dicts_list[len(num)-i -1][num[i]]
+            res += dicts_list[len(num)-i -1][num[i]] #Adds the corresponding letter depending on its base and numerical value
 
         return res
 
+#Time complexity: O(n)
+#Space complexity: O(n)
         
         
     
