@@ -72,5 +72,6 @@ class Solution:
             i += 1
         return res
             
-            
+        #Time complexity: O(n)
+        #Space complexity: O(n)
         
