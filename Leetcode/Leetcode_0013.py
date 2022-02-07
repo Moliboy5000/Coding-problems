@@ -32,7 +32,7 @@ class Solution:
     def romanToInt(self, s: str) -> int:
         
         
-        combs = {
+        combs = {  #Dicct with roman numerals corresponding to their numerical value
         "I": 1,
         "V": 5,
         "X": 10,
@@ -46,7 +46,7 @@ class Solution:
         i = 0
         while i < len(s):
             if i != len(s)-1:
-                if s[i] == "I" and s[i+1] == "V":
+                if s[i] == "I" and s[i+1] == "V":   #In the exception cases mentioned above
                     i += 1
                     res += 4
                 elif s[i] == "I" and s[i+1] == "X":
