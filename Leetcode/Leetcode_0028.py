@@ -18,7 +18,12 @@ class Solution:
         
         if needle in haystack:
             for i in range(len(haystack)):
-                if haystack[i:i+len(needle)] == needle:
+                if haystack[i:i+len(needle)] == needle: #If the needle is found in the interval the range of the length of the needle, the index is returned.
                     return i
         else:
             return -1
+
+        
+        
+        #Time complexity: O(n)
+        #Space complexity: O(n)
