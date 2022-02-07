@@ -12,9 +12,11 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         
+        #A Sudoku board is valid if there is no same number horizontally, vertically and in the same 3x3 box.
         
-        for i in range(9):
-            nums = []
+        
+        for i in range(9): #Iterate horizontally
+            nums = [] #Each new number is added to the array, if the same number is found again, then the board is not valid.
             for j in range(9):
                 if board[i][j] in nums:
                     return False
@@ -22,7 +24,7 @@ class Solution:
                     nums.append(board[i][j])
                     
                     
-        for i in range(9):
+        for i in range(9): #Iterate vertically
             nums = []
             for j in range(9):
                 if board[j][i] in nums:
@@ -39,7 +41,7 @@ class Solution:
         
             for m in range(2,9,3):
                 nums = []
-                box = board[m-2][lower:upper] + board[m-1][lower:upper] + board[m][lower:upper]
+                box = board[m-2][lower:upper] + board[m-1][lower:upper] + board[m][lower:upper] #Checks each 3x3 box by adding the 3 rows to an array and iterating through it.
                 for j in box:
                     if j in nums:
                         return False
@@ -53,7 +55,8 @@ class Solution:
             
         
         
-            
+         #Time complexity: O(n^2)
+         #Space complexity: O(n)
             
             
                 
